@@ -23,7 +23,7 @@
   padding: 30px;
   border-radius: 25px;
   margin: 20px;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   width: 200px;
   height: 160px;
 }
@@ -82,7 +82,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
-  padding: 0;
-  padding-bottom: 50px;
+  padding: 0px;
+  padding-bottom: 150px;
   height: 100vh;
 }
