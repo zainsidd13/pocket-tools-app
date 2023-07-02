@@ -9,12 +9,12 @@ interface DarkModeProps {
 function DarkMode({mode, onModeChange}: DarkModeProps) {
   const handleModeChange = (e: SyntheticEvent) => {
     e.preventDefault();
-    onModeChange(mode ? "" : "light");
+    onModeChange(mode ==='light' ? "dark" : "light");
   }
 
   return (
     <FormGroup>
-        <FormControlLabel control={<Switch onChange={handleModeChange}/>} label={mode ? "Light" : "Dark"} />
+        <FormControlLabel control={<Switch onChange={handleModeChange}/>} label={mode==='light' ? "Light" : "Dark"} />
     </FormGroup>
   )
 

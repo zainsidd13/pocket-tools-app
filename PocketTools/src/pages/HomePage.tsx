@@ -27,7 +27,7 @@ function HomePage({mode}: HomeProps) {
     
     return(
         <>
-            <h1 className="title" style={mode? {color: 'black'} : {color: 'white'}}>Welcome to Internet Pocket Tools!</h1>
+            <h1 className="title" style={mode==='light' ? {color: 'black'} : {color: 'white'}}>Welcome to Internet Pocket Tools!</h1>
             <p className="sub-title">The source for all your internet needs.</p>
             <div className="search-bar-container">
                 <TextField 
@@ -35,9 +35,9 @@ function HomePage({mode}: HomeProps) {
                     id="outlined-basic" 
                     label="Search" 
                     variant="outlined" 
-                    sx={mode ? { fieldset: { borderColor: 'black' } } : { fieldset: { borderColor: 'white' } }}
-                    inputProps={mode ? { style: {color: 'black'}} : { style: {color: 'white'}}} 
-                    InputLabelProps={mode ? {style: { color: 'black' } } : {style: { color: '#fff' } }}
+                    sx={mode ==='light' ? { fieldset: { borderColor: 'black' } } : { fieldset: { borderColor: 'white' } }}
+                    inputProps={mode === 'light' ? { style: {color: 'black'}} : { style: {color: 'white'}}} 
+                    InputLabelProps={mode === 'light' ? {style: { color: 'black' } } : {style: { color: '#fff' } }}
                     value={searchValue}
                     onChange={(e) => setSearchValue(e.target.value)}
                 />
