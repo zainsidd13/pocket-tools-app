@@ -1,3 +1,5 @@
+import ShareIcon from '@mui/icons-material/Share';
+
 interface ToolProps {
     title?: string;
     icon?: React.ElementType;
@@ -11,6 +13,9 @@ function Tool({ title = 'To Fill', icon: IconComponent, link}: ToolProps) {
     
     <a href={link} target="_blank">
         <div className='tool-card' style={{ border: `1px solid ${randomColor}` }}>
+            <div className='share-icon'>
+                <ShareIcon />
+            </div>
             {IconComponent && <IconComponent sx={{ fontSize: 70, color: 'white' }} className='card-icon' />}
             <h2 className='card-title'>
                 {title}

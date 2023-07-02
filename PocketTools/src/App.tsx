@@ -3,9 +3,12 @@ import HomePage from './pages/HomePage';
 function App() {
 
   return (
-    <>
-      <HomePage/>
-    </>
+    <html className='light'>
+      <body>
+        <HomePage />
+      </body>
+    </html>
+
   )
 }
 

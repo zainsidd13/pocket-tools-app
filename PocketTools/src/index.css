@@ -1,5 +1,4 @@
 :root {
-
   color-scheme: light dark;
   background-color: #242424;
 }
@@ -7,6 +6,7 @@
 .title {
   text-align: center;
   margin-top: 100px;
+  color: white;
 }
 
 .sub-title {
@@ -54,10 +54,6 @@ a:hover {
   text-align: center; 
 }
 
-.card-icon {
-  margin-top: 15px;
-}
-
 .search-bar-container {
   display: flex;
   justify-content: center;
@@ -67,4 +63,9 @@ a:hover {
 .search-bar {
   border-color: #53af5b !important;
   width: 40%;
+}
+
+.share-icon {
+  display: flex;
+  align-self: flex-end;
 }

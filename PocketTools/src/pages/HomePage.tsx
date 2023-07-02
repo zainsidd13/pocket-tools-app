@@ -1,10 +1,12 @@
 import Tool from "../components/Tool";
 import { useState } from 'react'; 
+import TextField from '@mui/material/TextField';
 import SpeedIcon from '@mui/icons-material/Speed';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import BrushIcon from '@mui/icons-material/Brush';
-import TextField from '@mui/material/TextField';
+import SpellcheckIcon from '@mui/icons-material/Spellcheck';
+
 
 function HomePage() {
     const [searchValue, setSearchValue] = useState('');
@@ -14,6 +16,7 @@ function HomePage() {
         { title: 'Stock Images', icon: ImageSearchIcon, link: 'https://unsplash.com/' },
         { title: 'Extract Webpage Images', icon: CropOriginalIcon, link: 'https://extract.pics' },
         { title: 'Infographic Creator', icon: BrushIcon, link: 'https://www.canva.com/' },
+        { title: 'Writing Assistant', icon: SpellcheckIcon, link: 'https://www.grammarly.com/' },
     ].filter((tool) => tool.title.toLowerCase().includes(searchValue.toLowerCase()));
     
     
