@@ -1,4 +1,4 @@
-import { useState, SyntheticEvent } from "react";
+import { SyntheticEvent } from "react";
 import { Switch, FormGroup, FormControlLabel } from "@mui/material";
 
 interface DarkModeProps {
