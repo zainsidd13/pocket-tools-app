@@ -81,8 +81,6 @@ body {
   height: 100%;
   background-color: var(--background-color);
   margin: 0;
-  /* padding: 0px; */
-  padding-bottom: 150px;
 }
 
 .dark-mode-button {
