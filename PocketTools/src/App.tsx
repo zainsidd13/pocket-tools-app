@@ -11,8 +11,10 @@ function App() {
 
   return (
     <body className={mode}>
+      <div className='dark-mode-button'>
+        <DarkMode mode={mode} onModeChange={handleModeChange}/>
+      </div>
       <HomePage mode={mode}/>
-      <DarkMode mode={mode} onModeChange={handleModeChange}/>
     </body>
   )
 }

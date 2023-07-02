@@ -6,7 +6,7 @@
 .title {
   text-align: center;
   margin-top: 0px;
-  padding-top: 100px;
+  padding-top: 20px;
 }
 
 .sub-title {
@@ -75,14 +75,22 @@ body {
 }
 
 body.light {
-  --background-color: lavender;
+  --background-color: lavender !important;
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--text-color);
+  background: var(--background-color);
+  /* color: var(--text-color); */
   margin: 0;
   padding: 0px;
   padding-bottom: 150px;
   height: 100vh;
+}
+
+.dark-mode-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 20px;
 }
