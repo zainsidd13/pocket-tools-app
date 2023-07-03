@@ -65,7 +65,7 @@ a:hover {
   align-self: flex-end;
 }
 
-div.dark {
+/* div.dark {
   --background-color: #242424;
   background-color: var(--background-color);
 }
@@ -73,13 +73,13 @@ div.dark {
 div.light {
   --background-color: lavender;
   background-color: var(--background-color);
-}
+} */
 
-body {
+/* body {
   background-color: var(--background-color);
   background-color: lavender;
   margin: 0;
-}
+} */
 
 .dark-mode-button {
   display: flex;
