@@ -24,7 +24,6 @@ function HomePage({mode}: HomeProps) {
         { title: 'AI Tool', icon: SmartToyIcon, link: 'https://chat.openai.com/'},
     ].filter((tool) => tool.title.toLowerCase().includes(searchValue.toLowerCase()));
     
-    
     return(
         <>
             <h1 className="title" style={mode==='light' ? {color: 'black'} : {color: 'white'}}>Welcome to Internet Pocket Tools!</h1>

@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-internet-meter": "^1.1.1",
+    "react-native-network-bandwith-speed": "^3.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

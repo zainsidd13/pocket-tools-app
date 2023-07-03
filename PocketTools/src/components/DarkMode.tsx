@@ -14,7 +14,7 @@ function DarkMode({mode, onModeChange}: DarkModeProps) {
 
   return (
     <FormGroup>
-        <FormControlLabel control={<Switch onChange={handleModeChange}/>} label={mode==='light' ? "Light" : "Dark"} />
+        <FormControlLabel control={<Switch onChange={handleModeChange}/>} label={mode==='light' ? "Light" : "Dark"} sx={mode==='dark' ? {color: 'white'} : {color: 'black'}}/>
     </FormGroup>
   )
 

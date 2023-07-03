@@ -60,9 +60,12 @@ a:hover {
   width: 40%;
 }
 
-.share-icon {
+.action-icons {
   display: flex;
   align-self: flex-end;
+  gap: 0.7em;
+  margin-right: -15px;
+  margin-top: -10px;
 }
 
 /* div.dark {
