@@ -1,5 +1,5 @@
 import HomePage from './pages/HomePage';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import DarkMode from './components/DarkMode';
 
 
@@ -9,14 +9,17 @@ function App() {
     setMode(newMode);
   }
 
+  useEffect(() => {
+    document.body.style.backgroundColor = mode === 'light' ? 'lavender' : '#242424';
+  }, [mode])
   return (
 
-    <body className={mode}>
+    <div className={mode}>
       <div className='dark-mode-button'>
         <DarkMode mode={mode} onModeChange={handleModeChange}/>
       </div>
       <HomePage mode={mode}/>
-   </body>
+   </div>
 
   )
 }
