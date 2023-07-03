@@ -65,24 +65,23 @@ a:hover {
   align-self: flex-end;
 }
 
-:root {
-  --background-color: lavender;
-}
-
 body.dark {
   --background-color: #242424;
+  margin: 0;
+  height: 100%;
 }
 
 body.light {
   --background-color: lavender;
+  margin: 0;
+  height: 100%;
 }
 
 body {
-  width:100%;
-  height:100vh;
   background-color: var(--background-color);
   margin: 0;
 }
+
 
 .dark-mode-button {
   display: flex;

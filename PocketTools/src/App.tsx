@@ -16,7 +16,7 @@ function App() {
         <DarkMode mode={mode} onModeChange={handleModeChange}/>
       </div>
       <HomePage mode={mode}/>
-    </body>
+   </body>
 
   )
 }
