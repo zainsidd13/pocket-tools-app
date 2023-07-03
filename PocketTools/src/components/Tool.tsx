@@ -10,13 +10,29 @@ interface ToolProps {
 function Tool({ title = 'To Fill', icon: IconComponent, link, mode}: ToolProps) {
     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
+    const handleShareClick = async () => {
+        try {
+          if (navigator.share) {
+            await navigator.share({
+              title: 'Share Demo',
+              text: title,
+              url: link
+            });
+          } else {
+            console.log('Web Share API not supported.');
+          }
+        } catch (error) {
+          console.error('Error sharing:', error);
+        }
+      };
+
     return (
     
     <a href={link} target="_blank">
         <div className='tool-card' style={mode==='light' ? {border : '1px solid black'} : { border: `1px solid ${randomColor}` }}>
                 <div className='share-icon'>
-                    <a href="#">
-                        <ShareIcon />
+                    <a href="#" onClick={handleShareClick}>
+                        <ShareIcon sx={mode==='light' ? {color: 'black' } : {color: 'white'}}/>
                     </a>
                 </div>
             {IconComponent && <IconComponent sx={{ fontSize: 70, color: 'white' }} className='card-icon' style={mode==='light' ? {color : 'black'} : {color : 'white'}}/>}
