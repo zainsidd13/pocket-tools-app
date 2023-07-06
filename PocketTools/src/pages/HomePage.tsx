@@ -1,12 +1,14 @@
 import Tool from "../components/Tool";
 import { useState } from 'react'; 
 import TextField from '@mui/material/TextField';
+import { Button } from "@mui/material";
 import SpeedIcon from '@mui/icons-material/Speed';
 import CropOriginalIcon from '@mui/icons-material/CropOriginal';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import BrushIcon from '@mui/icons-material/Brush';
 import SpellcheckIcon from '@mui/icons-material/Spellcheck';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import NavBar from "../components/NavBar";
 
 interface HomeProps {
     mode?: string;

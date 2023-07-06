@@ -68,25 +68,19 @@ a:hover {
   margin-top: -10px;
 }
 
-/* div.dark {
-  --background-color: #242424;
-  background-color: var(--background-color);
+.header {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
 }
 
-div.light {
-  --background-color: lavender;
-  background-color: var(--background-color);
-} */
-
-/* body {
-  background-color: var(--background-color);
-  background-color: lavender;
-  margin: 0;
-} */
-
 .dark-mode-button {
-  display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
   padding-top: 20px;
-  padding-right: 20px;
+  padding-right: 20px; 
+}
+
+.my-tools-link {
+  padding-top: 20px;
+  padding-left: 20px; 
 }
