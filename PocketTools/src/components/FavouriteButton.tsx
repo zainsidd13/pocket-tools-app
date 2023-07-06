@@ -1,33 +1,80 @@
-import { useState } from 'react';
+import { useState, useEffect, SyntheticEvent } from "react";
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
-import { SyntheticEvent } from 'react';
+import StarRateIcon from '@mui/icons-material/StarRate';
 
-interface FavouriteProps {
+interface FavouriteButtonProps {
     title?: string;
-    icon?: React.ElementType;
+    mode?: string;
     link?: string;
-    mode?: string
-  }
-  
-// interface Favourite {
-//     title: string | undefined;
-//     link: string | undefined;
-//     mode: string | undefined;
-// }
-function FavouriteButton({title='Something', link, mode}: FavouriteProps) {
-    const [favourites, setFavourites] = useState<string[]>([]);
+    iconName?: string;
+}
 
-    const handleFacourite = (e: SyntheticEvent) => {
-        e.preventDefault();
-        const newFavourite = title;
-        setFavourites((prevFavourites) => [...prevFavourites, title]);
-        console.log([...favourites, newFavourite]);
+
+function FavouriteButton ({title, mode, link, iconName}: FavouriteButtonProps) {
+    const [isFavourited, setFavourited] = useState(false);
+    const data = {'title': title, 'link': link, 'iconName': iconName};
+    interface MyDictionary {
+      title: string;
+      link: string;
+      iconName: string;
+    }
+
+    useEffect(() => {
+      const existingData = localStorage.getItem('favourites');
+
+      if (existingData) {
+        const newData = JSON.parse(existingData);
+
+        newData.map((dict: MyDictionary, index: number) => {
+          if (title === dict.title) {
+            setFavourited(true);
+          }
+
+        });
+
+      } else { // if 'favourites' does not exist in storage, create it
+        localStorage.setItem('favourites', JSON.stringify([]));
+      }
+    }, []);
+
+
+    const handleFavourite = (e: SyntheticEvent) => {
+      e.preventDefault();
+
+      // localStorage.removeItem('favourites'); // for testing purposes - do not uncomment
+      const existingData = localStorage.getItem('favourites');
+      if (existingData) {
+        const newData = JSON.parse(existingData);
+
+
+        let indexToRemove = 0;
+        newData.map((dict: MyDictionary, index: number) => {
+          if (title === dict.title) { // if 'is favourited'
+            newData.splice(index, 1);
+            setFavourited(false);
+
+            indexToRemove = index
+          }
+
+          return null; // Explicitly return a value (null in this case)
+        });
+
+        if (!isFavourited && indexToRemove === 0) {
+          newData.push(data);
+          setFavourited(true);
+        }
+
+        localStorage.setItem('favourites', JSON.stringify(newData)); //change array back to json store in localstorage
+      } 
+      console.log(localStorage.getItem('favourites'));
     };
 
     return (
-        <a href="#" onClick={handleFacourite}>
-            <StarOutlineIcon sx={{fontSize : 30, color: 'white', marginTop: '-4px'}} />
+        <a href="#" onClick={handleFavourite}>
+            {isFavourited && <StarRateIcon sx={mode === 'light' ? {fontSize : 30, color: 'black', marginTop: '-4px'} : {fontSize : 30, color: 'white', marginTop: '-4px'}} />}
+            {!isFavourited && <StarOutlineIcon sx={mode === 'light' ? {fontSize : 30, color: 'black', marginTop: '-4px'} : {fontSize : 30, color: 'white', marginTop: '-4px'}} />}
         </a>
+
     )
 }
 

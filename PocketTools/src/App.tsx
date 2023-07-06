@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import { useState, useEffect } from 'react';
 import DarkMode from './components/DarkMode';
+import MyToolsPage from './pages/MyToolsPage';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
         <Route path="/" element={<HomePage mode={mode}/>} />
+        <Route path='/mytools' element={<MyToolsPage mode={mode}/>} />
         <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>

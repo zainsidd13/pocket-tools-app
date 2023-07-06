@@ -1,39 +1,16 @@
-import { SyntheticEvent } from 'react';
 import ShareButton from './ShareButton';
-import StarOutlineIcon from '@mui/icons-material/StarOutline';
+import FavouriteButton from './FavouriteButton';
 
 interface ToolProps {
     title?: string;
     icon?: React.ElementType;
     link?: string;
     mode?: string;
+    iconName?: string;
   }
 
-function Tool({ title = 'To Fill', icon: IconComponent, link, mode}: ToolProps) {
+function Tool({ title = 'To Fill', icon: IconComponent, link, mode, iconName}: ToolProps) {
     const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
-
-
-    const handleFavourite = (e: SyntheticEvent) => {
-      e.preventDefault();
-      // localStorage.removeItem('favourites');
-      const existingData = localStorage.getItem('favourites');
-      if (existingData) {
-        const newData = JSON.parse(existingData);
-
-        if (newData.includes(title)) {
-          const indexToRemove = newData.indexOf(title);
-          console.log('removing');
-          newData.splice(indexToRemove, 1);
-        } else {
-          newData.push(title);
-        }
-          localStorage.setItem('favourites', JSON.stringify(newData));
-      } else {
-        localStorage.setItem('favourites', JSON.stringify([title]));
-      }
-
-      console.log(localStorage.getItem('favourites'));
-    };
 
     return (
     
@@ -41,9 +18,7 @@ function Tool({ title = 'To Fill', icon: IconComponent, link, mode}: ToolProps) 
         <div className='tool-card' style={mode==='light' ? {border : '1px solid black'} : { border: `1px solid ${randomColor}` }}>
                 <div className='action-icons'>
                   <ShareButton title={title} link={link} mode={mode}/>
-                  <a href="#" onClick={handleFavourite}>
-                    <StarOutlineIcon sx={{fontSize : 30, color: 'white', marginTop: '-4px'}} />
-                  </a>
+                  <FavouriteButton title={title} link={link} mode={mode} iconName={iconName}/>
                 </div>
             {IconComponent && <IconComponent sx={{ fontSize: 70, color: 'white' }} className='card-icon' style={mode==='light' ? {color : 'black'} : {color : 'white'}}/>}
             <h2 className='card-title' style={mode==='light' ? {color : 'black'} : {color : 'white'}}>
