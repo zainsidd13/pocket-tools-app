@@ -7,6 +7,10 @@ import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import BrushIcon from '@mui/icons-material/Brush';
 import SpellcheckIcon from '@mui/icons-material/Spellcheck';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
+import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import CalculateIcon from '@mui/icons-material/Calculate';
+import GroupsIcon from '@mui/icons-material/Groups';
 
 interface HomeProps {
     mode?: string;
@@ -22,6 +26,10 @@ function HomePage({mode}: HomeProps) {
         { title: 'Infographic Creator', icon: BrushIcon, link: 'https://www.canva.com/', iconName: 'BrushIcon' },
         { title: 'Writing Assistant', icon: SpellcheckIcon, link: 'https://www.grammarly.com/', iconName: 'SpellCheckIcon' },
         { title: 'AI Tool', icon: SmartToyIcon, link: 'https://chat.openai.com/', iconName: 'SmartToyIcon'},
+        { title: "Internet Archive", icon: LibraryBooksIcon, link: 'https://archive.org/', iconName: 'LibraryBooksIcon'},
+        { title: 'Image Editor', icon: AutoAwesomeIcon, link: 'https://pixlr.com/', iconName: 'AutoAwesomeIcon'},
+        { title: 'Answer Engine', icon: CalculateIcon, link: 'https://www.wolframalpha.com/', iconName: 'CalculateIcon'},
+        { title: 'Project Management', icon: GroupsIcon, link: 'https://trello.com/', iconName: 'GroupsIcon'}
     ].filter((tool) => tool.title.toLowerCase().includes(searchValue.toLowerCase()));
     
     return(
