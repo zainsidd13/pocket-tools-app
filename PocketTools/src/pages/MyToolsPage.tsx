@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Tool from "../components/Tool";
 import MyToolsIcons from "../components/MyToolsIcons";
 
 interface MyToolsPage {

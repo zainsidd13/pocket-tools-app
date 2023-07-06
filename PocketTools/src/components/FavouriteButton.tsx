@@ -25,7 +25,7 @@ function FavouriteButton ({title, mode, link, iconName}: FavouriteButtonProps) {
       if (existingData) {
         const newData = JSON.parse(existingData);
 
-        newData.map((dict: MyDictionary, index: number) => {
+        newData.map((dict: MyDictionary) => {
           if (title === dict.title) {
             setFavourited(true);
           }

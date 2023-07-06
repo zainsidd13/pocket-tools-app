@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect } from "react";
+import { SyntheticEvent } from "react";
 import { useLocation } from "react-router-dom";
 import { Switch, FormGroup, FormControlLabel, Button } from "@mui/material";
 
