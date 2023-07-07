@@ -18,7 +18,7 @@ function NavBar({mode, onModeChange}: NavBarProps) {
     <div className="header">
       <div className='my-tools-link'>
           {location.pathname==='/mytools' && <Button variant="text" href='/'>Home</Button>}
-          {location.pathname==='/' && <Button variant="text" href='/mytools'>My Tools</Button>}
+          {location.pathname==='/' && <Button variant="text" href='mytools'>My Tools</Button>}
       </div>
       <div className="dark-mode-button">
         <FormGroup>
