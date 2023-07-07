@@ -24,11 +24,15 @@ function MyToolsPage({mode}: MyToolsPage) {
     }, []);
 
     return (
-        <div className='tools-body'>
-            {favourites.map((dict: MyDictionary, index) => (
-                <MyToolsIcons key={index} title={dict.title} link={dict.link} iconName={dict.iconName} mode={mode}/>
-            ))}
-        </div>
+        <>
+            <h1 className="title" style={mode==='light' ? {color: 'black'} : {color: 'white'}}>My Tools</h1>
+            <p className="sub-title">Your personalized pocket</p>
+            <div className='tools-body'>
+                {favourites.map((dict: MyDictionary, index) => (
+                    <MyToolsIcons key={index} title={dict.title} link={dict.link} iconName={dict.iconName} mode={mode}/>
+                ))}
+            </div>
+        </>
     )
 }
 
