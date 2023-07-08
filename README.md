@@ -26,7 +26,7 @@ Welcome to Internet Pocket Tools, your one-stop solution for a wide range of int
 
 ## Deployment
 
-Internet Pocket Tools is deployed on [Netlify](https://www.netlify.com/), providing you with a seamless and hassle-free experience. By leveraging Netlify's powerful hosting capabilities, we ensure that the app is always accessible to you.
+Internet Pocket Tools is deployed on [Netlify](https://www.netlify.com/), providing you with a seamless and hassle-free experience. By leveraging Netlify's powerful hosting capabilities, I ensure that the app is always accessible to you.
 
 You can access the live version of Internet Pocket Tools by clicking [here](https://64a7598cef91860b48e75117--glowing-cannoli-f85b34.netlify.app/).
 
@@ -62,7 +62,7 @@ npm run dev
 
 ## Contributing
 
-We welcome contributions from the community to make Internet Pocket Tools even more amazing! If you'd like to contribute, please follow these guidelines:
+I welcome contributions from the community to make Internet Pocket Tools even more amazing! If you'd like to contribute, please follow these guidelines:
 
 1. Fork the repository and create your branch:
 
@@ -79,7 +79,7 @@ git push origin my-feature
 
 3. Open a pull request, detailing the changes you've made and the rationale behind them.
 
-We appreciate your time and effort in improving Internet Pocket Tools, and we'll review your contribution as soon as possible.
+I appreciate your time and effort in improving Internet Pocket Tools, and I'll review your contribution as soon as possible.
 
 ## License
 
@@ -87,6 +87,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Feedback and Support
 
-We value your feedback and are here to assist you. If you encounter any issues, have suggestions, or need help with Internet Pocket Tools, please don't hesitate to [open an issue](https://github.com/your-username/internet-pocket-tools/issues/new). Our team will be glad to assist you.
+I value your feedback and are here to assist you. If you encounter any issues, have suggestions, or need help with Internet Pocket Tools, please don't hesitate to contact me!
 
 Enjoy using Internet Pocket Tools, and may your online journey be smooth and efficient!
