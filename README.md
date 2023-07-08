@@ -28,7 +28,7 @@ Welcome to Internet Pocket Tools, your one-stop solution for a wide range of int
 
 Internet Pocket Tools is deployed on [Netlify](https://www.netlify.com/), providing you with a seamless and hassle-free experience. By leveraging Netlify's powerful hosting capabilities, we ensure that the app is always accessible to you.
 
-You can access the live version of Internet Pocket Tools by visiting [https://your-netlify-app-url.com](https://your-netlify-app-url.com).
+You can access the live version of Internet Pocket Tools by clicking [here](https://64a7598cef91860b48e75117--glowing-cannoli-f85b34.netlify.app/).
 
 ## Getting Started
 
@@ -37,7 +37,7 @@ To get started with Internet Pocket Tools on your local machine, follow these st
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/internet-pocket-tools.git
+git clone [https://github.com/zainsidd13/internet-pocket-tools.git](https://github.com/zainsidd13/pocket-tools-app.git)
 ```
 
 2. Navigate to the project directory:
